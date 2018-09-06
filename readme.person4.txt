@@ -1,1 +1,1 @@
-Mitchell Stasko person 4
+Mitchell Stasko person 4 mstasko3@gatech.edu
