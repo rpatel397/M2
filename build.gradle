@@ -4,3 +4,27 @@
  * This is a general purpose Gradle build.
  * Learn how to create Gradle builds at https://guides.gradle.org/creating-new-gradle-builds/
  */
+apply plugin: "java"
+
+defaultTasks "jar"
+
+sourceSets {
+    main {
+        java {
+            srcDir "src/main/java/edu/gatech/oad/antlab"
+        }
+    }
+}
+
+dependencies {
+    compile files("lib/resources.jar");
+}
+//
+jar {
+    baseName = "testingpurpose"
+    version = "1.0"
+    manifest {
+        attributes("Main-Class": "edu.gatech.oad.antlab.pkg1.AntLabMain",
+                "Class-Path": "M2/lib/resources.jar")
+    }
+}
